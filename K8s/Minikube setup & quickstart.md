@@ -65,5 +65,5 @@ Delete all of the minikube clusters:
 minikube delete --all
 ```
 
-For further interaction with `kubectl` refer to: [[kubectl usage]]
+For further interaction with `kubectl` refer to: [[kubectl common command]]
 
