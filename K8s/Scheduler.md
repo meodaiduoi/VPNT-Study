@@ -21,3 +21,21 @@ spec:
 
 
 ## NodeSelector[*](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)
+
+## Taints & Tolarent
+Run the command: `kubectl taint nodes node01 spray=mortein:NoSchedule`
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bee
+spec:
+  containers:
+  - image: nginx
+    name: bee
+  tolerations:
+  - key: spray
+    value: mortein
+    effect: NoSchedule
+    operator: Equal

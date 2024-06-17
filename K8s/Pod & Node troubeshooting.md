@@ -27,3 +27,11 @@ kubectl explain <resource>
 # ex
 kubectl explain replicaset
 ```
+# Check po all
+```
+k get po -o wide sh
+NAME                    READY   STATUS    RESTARTS   AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+blue-667bf6b9f9-dplnh   1/1     Running   0          63s   10.244.0.4   controlplane   <none>           <none>
+blue-667bf6b9f9-rxr5b   1/1     Running   0          63s   10.244.1.2   node01         <none>           <none>
+blue-667bf6b9f9-zwk45   1/1     Running   0          63s   10.244.1.3   node01         <none>           <none>
+```
